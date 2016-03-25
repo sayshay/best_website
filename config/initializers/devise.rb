@@ -240,6 +240,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   config.omniauth :twitter, '6T0mBOSYEgpFPZGW4azcYjDkI', 'yIyuUVCJkr5ZbzcSMaaGiW8I5rK28zjn6Oohp8gUH6Do8hsZW6'
   config.omniauth :facebook, '208256392895631', '6155649bfc8c2403536b381f290c12c9'
+  config.omniauth :google_oauth2, '1067623506508-jnqmtttkb3268j08mp1cajjjrioladbc.apps.googleusercontent.com', '558ZByESxBLcJeuwAqNE6_X-'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
