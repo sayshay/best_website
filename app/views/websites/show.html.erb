@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @website.name %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @website.twitter %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @website.industry %>
+</p>
+
+<p>
+  <strong>Features:</strong>
+  <%= @website.features %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @website.description %>
+</p>
+
+<%= link_to 'Edit', edit_website_path(@website) %> |
+<%= link_to 'Back', websites_path %>
