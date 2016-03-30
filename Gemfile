@@ -13,6 +13,7 @@ gem 'devise'
 gem 'omniauth-twitter'
 gem "omniauth-google-oauth2"
 gem 'omniauth-facebook'
+gem 'owlcarousel-rails'
 
 group :development, :test do
   gem 'byebug'
