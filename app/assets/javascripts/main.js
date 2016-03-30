@@ -151,14 +151,14 @@ $(window).on('load', function () {
 	});
 
 	// выбор дат
-	function cb(start, end) {
-        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-    }
-    cb(moment().subtract(29, 'days'), moment());
+	// function cb(start, end) {
+ //        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+ //    }
+ //    cb(moment().subtract(29, 'days'), moment());
 
-    $('#reportrange').daterangepicker({
+ //    $('#reportrange').daterangepicker({
 
-    }, cb);
+ //    }, cb);
 
     // дропдаун експорта
     $('.export_trig').on('click', function () {
@@ -191,40 +191,40 @@ $(window).on('load', function () {
 	});
 
     // графики в админке
-	new Chartist.Line('#graph1', {
-	  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Nov', 'Dec'],
-	  series: [{
-		name: 'series-1',
-	    data: [1000, 2000, 1000, 3000, 1000, 2000, 1000, 3000, 3000, 1000]
-	  }, {
-	  	name: 'series-2',
-	    data: [3000, 4000, 4000, 5000, 3000, 4000, 3000, 6000, 5000, 2000]
-	  }, {
-	  	name: 'series-3',
-	    data: [4000, 5000, 7000, 6000, 4000, 7000, 6000, 7000, 6000, 4000]
-	  }]
-	}, {
-		fullWidth: true,
-		low: 0,
-		// showArea: true,
-		axisY: {
-			labelInterpolationFnc: function(value) {
-			  return '$' + (value / 1000) + 'K';
-			}
-		},
-		chartPadding: {
-		    right: 40
-		},
-		lineSmooth: Chartist.Interpolation.none(),
-		series: {
-			'series-1': {
-		      showArea: true,
-		    },
-		}
-	});
+	// new Chartist.Line('#graph1', {
+	//   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Nov', 'Dec'],
+	//   series: [{
+	// 	name: 'series-1',
+	//     data: [1000, 2000, 1000, 3000, 1000, 2000, 1000, 3000, 3000, 1000]
+	//   }, {
+	//   	name: 'series-2',
+	//     data: [3000, 4000, 4000, 5000, 3000, 4000, 3000, 6000, 5000, 2000]
+	//   }, {
+	//   	name: 'series-3',
+	//     data: [4000, 5000, 7000, 6000, 4000, 7000, 6000, 7000, 6000, 4000]
+	//   }]
+	// }, {
+	// 	fullWidth: true,
+	// 	low: 0,
+	// 	// showArea: true,
+	// 	axisY: {
+	// 		labelInterpolationFnc: function(value) {
+	// 		  return '$' + (value / 1000) + 'K';
+	// 		}
+	// 	},
+	// 	chartPadding: {
+	// 	    right: 40
+	// 	},
+	// 	lineSmooth: Chartist.Interpolation.none(),
+	// 	series: {
+	// 		'series-1': {
+	// 	      showArea: true,
+	// 	    },
+	// 	}
+	// });
 })
 
-$( document ).ready(function() {	
+$( document ).ready(function() {
 })
 
 

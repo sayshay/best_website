@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require daterangepicker
 //= require owl.carousel
 //= require_tree .
