@@ -22,6 +22,7 @@
         <td><%= website.industry %></td>
         <td><%= website.features %></td>
         <td><%= website.description %></td>
+        <td><%= image_tag website.image %></td>
         <td><%= link_to 'Show', website %></td>
         <td><%= link_to 'Edit', edit_website_path(website) %></td>
         <td><%= link_to 'Destroy', website, method: :delete, data: { confirm: 'Are you sure?' } %></td>

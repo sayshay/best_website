@@ -28,7 +28,7 @@ class WebsitesController < ApplicationController
 
     respond_to do |format|
       if @website.save
-        format.html { redirect_to @website, notice: 'Website was successfully created.' }
+        format.html { redirect_to new_company_path(@website.id), notice: 'Website was successfully created.' }
         format.json { render :show, status: :created, location: @website }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class WebsitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def website_params
-      params.require(:website).permit(:name, :twitter, :industry, :features, :description)
+      params.require(:website).permit(:name, :twitter, :industry, :features, :description, :image)
     end
 end

@@ -14,6 +14,8 @@ gem 'omniauth-twitter'
 gem "omniauth-google-oauth2"
 gem 'omniauth-facebook'
 gem 'owlcarousel-rails'
+gem 'paperclip', '~> 4.2'
+gem 'aws-sdk', '< 2.0'
 
 group :development, :test do
   gem 'byebug'

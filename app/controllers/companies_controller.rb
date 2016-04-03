@@ -15,6 +15,7 @@ class CompaniesController < ApplicationController
   # GET /companies/new
   def new
     @company = Company.new
+    @website_id = params[:id]
   end
 
   # GET /companies/1/edit
@@ -24,10 +25,12 @@ class CompaniesController < ApplicationController
   # POST /companies
   # POST /companies.json
   def create
+    @website = Website.find(params[:website_id])
     @company = Company.new(company_params)
 
     respond_to do |format|
       if @company.save
+        @company.websites << @website
         format.html { redirect_to @company, notice: 'Company was successfully created.' }
         format.json { render :show, status: :created, location: @company }
       else
@@ -69,6 +72,6 @@ class CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
-      params.require(:company).permit(:name, :email, :twitter, :city, :city, :state)
+      params.require(:company).permit(:name, :email, :twitter, :city, :city, :state, :image)
     end
 end

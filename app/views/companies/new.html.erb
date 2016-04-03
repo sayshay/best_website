@@ -157,6 +157,7 @@
             <div class="submit-wrap_form-wrap">
               <div class="submit-wrap_form-wrap_title"><span>INFO ABOUT WEB DESIGN COMPANY THAT MADE THE WEBSITE</span></div>
               <%= form_for @company do |f| %>
+                <%= hidden_field_tag :website_id, @website_id %>
                 <div class="submit-wrap_form-wrap_line clearfix">
                   <div class="submit-wrap_form-wrap_line_text"><span>COMPANY NAME</span></div>
                   <div class="submit-wrap_form-wrap_line_input">
