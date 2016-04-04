@@ -1,0 +1,91 @@
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="search-icon" viewBox="0 0 19.031 20.031">
+      <path d="M18.749,18.511 L17.539,19.739 C17.204,20.078 16.662,20.078 16.328,19.739 L10.591,13.913 C9.705,14.341 8.283,14.974 7.158,14.974 C3.116,14.974 -0.001,11.257 -0.001,7.155 C-0.001,3.053 3.116,-0.006 7.158,-0.006 C11.200,-0.006 14.863,3.053 14.863,7.155 C14.863,8.855 13.953,10.710 13.071,11.875 L18.749,17.283 C19.083,17.622 19.083,18.172 18.749,18.511 ZM7.474,2.408 C4.734,2.408 2.513,4.662 2.513,7.442 C2.513,10.222 4.734,12.476 7.474,12.476 C10.213,12.476 12.434,10.222 12.434,7.442 C12.434,4.662 10.213,2.408 7.474,2.408 Z"></path>
+    </symbol>
+  </defs>
+</svg>
+<!-- header start-->
+<header>
+  <div class="header_top-line">
+    <div class="container-fluid clearfix">
+      <div class="header_top-line_logo"><a href="#"><%= image_tag "template/header-logo.png" %></a></div>
+      <div class="header_top-line_nav">
+        <ul class="clearfix">
+          <li class="active"><a href="#">10 Best Web Design Firms</a></li>
+          <li><a href="#">Website Awards</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#"> Video Production</a></li>
+          <%if current_user %>
+             <li class="dropdown">
+              <button class="dropdown-toggle user-menu" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><%= current_user.name %>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                <li class='user-menu-item' ><a href="#">Dashboard</a></li>
+                <li class='user-menu-item' ><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                <li class='user-menu-item' ><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% else %>
+             <li> <%= link_to 'Login', new_user_session_path %></li>
+          <% end %>
+
+
+        </ul>
+      </div>
+      <div class="header_bottom-line_search visible-sm visible-xs">
+        <form action="#">
+          <div class="header_bottom-line_search_button">
+            <div class="header_bottom-line_search_button_trigger"></div>
+            <input type="submit">
+            <button type="submit" class="btn">
+              <svg class="svg-icon search-icon">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="header_bottom-line_search_input">
+            <input type="text" placeholder="SEARCH">
+          </div>
+        </form>
+      </div>
+      <div data-toggle="modal" data-target="#mob-menu-right" class="header_top-line_mob-menu-trigger visible-xs visible-sm">
+        <div class="header_top-line_mob-menu-trigger_icon"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="header_bottom-line">
+    <div class="container-fluid clearfix">
+      <div class="header_bottom-line_search">
+        <form action="#">
+          <div class="header_bottom-line_search_button">
+            <div class="header_bottom-line_search_button_trigger"></div>
+            <input type="submit">
+            <button type="submit" class="btn">
+              <svg class="svg-icon search-icon">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="header_bottom-line_search_input">
+            <input type="text" placeholder="SEARCH">
+          </div>
+        </form>
+      </div>
+      <div class="header_bottom-line_submit-your-website"><a href="#">SUBMIT YOUR WEBSITE</a></div>
+      <div class="header_bottom-line_nav">
+        <ul>
+          <li><a href="#">WINNERS</a></li>
+          <li><a href="#">RUNNERS-UP</a></li>
+          <li><a href="#">NEWLY ADDED</a></li>
+          <li><a href="#">POPULAR</a></li>
+          <li><a href="#">STAFF FAVORITES</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header end-->

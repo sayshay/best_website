@@ -39,6 +39,23 @@
   }
 }
 
+.btn--twitter {
+  color: #ffffff;
+  background-color: #1AB7EA;
+  height: 65px;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  line-height: 65px;
+  border-radius: 3px;
+  font-size: 2rem;
+  border: 1px solid transparent;
+  &:hover, &:focus, &:active {
+    color: #ffffff;
+    background-color: #1AB7EA;
+  }
+}
+
 .btn--kf-blue {
   color: #ffffff;
   background-color: #0096F8;
@@ -158,4 +175,25 @@
       margin-top: 15px;
     }
   }
+}
+
+.user-menu{
+      font-size: 15px;
+    color: #ffffff;
+    display: block;
+    text-decoration: none !important;
+    padding-top: 29px;
+    padding-bottom: 30px;
+    padding-left: 28px;
+    padding-right: 28px;
+    letter-spacing: 0.8px;
+    border: 0;
+    background-color: #3498DB;
+}
+.user-menu:hover{
+  background: #3190d0;
+}
+.user-menu-item{
+  margin-left: 0 !important;
+  width: 100%;
 }

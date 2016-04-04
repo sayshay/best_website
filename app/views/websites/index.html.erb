@@ -81,75 +81,7 @@
     <!-- svg иконки end-->
     <div class="page-wrapp">
       <div class="content-without-footer">
-        <!-- header start-->
-        <header>
-          <div class="header_top-line">
-            <div class="container-fluid clearfix">
-              <div class="header_top-line_logo"><a href="#"><%= image_tag "template/header-logo.png" %></a></div>
-              <div class="header_top-line_nav">
-                <ul class="clearfix">
-                  <li class="active"><a href="#">10 Best Web Design Firms</a></li>
-                  <li><a href="#">Website Awards</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#"> Video Production</a></li>
-                  <li><a href="#"> Login</a></li>
-                </ul>
-              </div>
-              <div class="header_bottom-line_search visible-sm visible-xs">
-                <form action="#">
-                  <div class="header_bottom-line_search_button">
-                    <div class="header_bottom-line_search_button_trigger"></div>
-                    <input type="submit">
-                    <button type="submit" class="btn">
-                      <svg class="svg-icon search-icon">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search-icon"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="header_bottom-line_search_input">
-                    <input type="text" placeholder="SEARCH">
-                  </div>
-                </form>
-              </div>
-              <div data-toggle="modal" data-target="#mob-menu-right" class="header_top-line_mob-menu-trigger visible-xs visible-sm">
-                <div class="header_top-line_mob-menu-trigger_icon"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="header_bottom-line">
-            <div class="container-fluid clearfix">
-              <div class="header_bottom-line_search">
-                <form action="#">
-                  <div class="header_bottom-line_search_button">
-                    <div class="header_bottom-line_search_button_trigger"></div>
-                    <input type="submit">
-                    <button type="submit" class="btn">
-                      <svg class="svg-icon search-icon">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search-icon"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="header_bottom-line_search_input">
-                    <input type="text" placeholder="SEARCH">
-                  </div>
-                </form>
-              </div>
-              <div class="header_bottom-line_submit-your-website"><a href="#">SUBMIT YOUR WEBSITE</a></div>
-              <div class="header_bottom-line_nav">
-                <ul>
-                  <li><a href="#">WINNERS</a></li>
-                  <li><a href="#">RUNNERS-UP</a></li>
-                  <li><a href="#">NEWLY ADDED</a></li>
-                  <li><a href="#">POPULAR</a></li>
-                  <li><a href="#">STAFF FAVORITES</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </header>
-        <!-- header end-->
+        <%= render 'layouts/header' %>
         <!-- main categories plates block start-->
         <div class="main-categories-plates grid">
           <div class="main-categories-plates_grid-sizer"></div>
