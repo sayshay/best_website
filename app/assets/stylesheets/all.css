@@ -6066,7 +6066,7 @@ select.selectpicker {
   vertical-align: top;
   border-radius: 0;
   background: none;
-  padding: 0;
+  padding: 0 !important;
   border: 0;
   text-decoration: none !important;
   outline: 0 !important;

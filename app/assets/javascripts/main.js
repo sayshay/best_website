@@ -222,6 +222,11 @@ $(window).on('load', function () {
 	// 	    },
 	// 	}
 	// });
+	$('.listing-wrap_grid.grid').masonry({
+	  columnWidth: '.listing-wrap_grid_sizer',
+	  itemSelector: '.listing-wrap_grid_grid-item',
+	  gutter: '.listing-wrap_grid_gutter'
+	});
 })
 
 $( document ).ready(function() {

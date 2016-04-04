@@ -194,8 +194,8 @@
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
   letter-spacing: 3px;
   transition: background 0.3s ease;
 }

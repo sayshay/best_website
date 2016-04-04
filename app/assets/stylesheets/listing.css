@@ -434,20 +434,20 @@
   fill: #747474;
   transition: fill 0.3s ease;
 }
-.details-img-wrap_img-place_top-icon {
+.details-img-wrap_img-place_top-icon-listing {
   position: absolute;
   top: -10px;
-  right: 27px;
+  right: 11px;
   width: 30px;
   height: 80px;
 }
 @media (max-width: 991px) {
-  .details-img-wrap_img-place_top-icon {
+  .details-img-wrap_img-place_top-icon-listing {
     right: auto;
     left: 22px;
   }
 }
-.details-img-wrap_img-place_top-icon:before {
+.details-img-wrap_img-place_top-icon-listing:before {
   position: absolute;
   display: block;
   content: '';
@@ -459,12 +459,12 @@
   border-width: 10px 0 0 10px;
   border-color: transparent transparent transparent #df2f1c;
 }
-.details-img-wrap_img-place_top-icon .top-icon-path {
+.details-img-wrap_img-place_top-icon-listing .top-icon-path {
   width: 30px;
   height: 80px;
   fill: #e74c3c;
 }
-.details-img-wrap_img-place_top-icon .round {
+.details-img-wrap_img-place_top-icon-listing .round {
   width: 40px;
   height: 40px;
   border-radius: 100%;
