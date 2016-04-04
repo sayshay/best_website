@@ -321,6 +321,9 @@
   padding-right: 35px;
   padding-top: 51px;
   padding-bottom: 65px;
+  width: 409px;
+  margin-right: 0px;
+  display: inline-block;
 }
 @media (max-width: 1201px) {
   .main-three-col-text-wrap .item {

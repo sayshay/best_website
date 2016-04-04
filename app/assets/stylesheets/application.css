@@ -12,6 +12,8 @@
  *
  *= require owl.carousel
  *= require owl.theme
+ *= require all
+ *= require home
  *= require_tree .
  *= require_self
  */

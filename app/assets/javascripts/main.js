@@ -72,24 +72,24 @@ $(window).on('load', function () {
 	});
 
 	// карусель текста на главной
-	$('.main-three-col-text-wrap_slider').owlCarousel({
-	    loop: false,
-	    margin: 0,
-	    nav: true,
-	    navRewind: false,
-	    navText: false,
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	        768:{
-	            items:2
-	        },
-	        1202:{
-	            items:3
-	        }
-	    }
-	})
+	// $('.main-three-col-text-wrap_slider').owlCarousel({
+	//     loop: false,
+	//     margin: 0,
+	//     nav: true,
+	//     navRewind: false,
+	//     navText: false,
+	//     responsive:{
+	//         0:{
+	//             items:1
+	//         },
+	//         768:{
+	//             items:2
+	//         },
+	//         1202:{
+	//             items:3
+	//         }
+	//     }
+	// })
 
 	// карусель партнеров в футере
 	$('.footer_partners-line_slider').owlCarousel({
