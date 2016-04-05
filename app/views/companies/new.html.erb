@@ -17,7 +17,7 @@
                   <div class="submit-wrap_form-wrap_line_text"><span>COMPANY NAME</span></div>
                   <div class="submit-wrap_form-wrap_line_input">
                     <div class="input-wrap">
-                      <%= f.text_field :name, placeholder: 'Site Name'%>
+                      <%= f.text_field :name, placeholder: 'Site Name', required: true%>
                     </div>
                   </div>
                 </div>
@@ -25,7 +25,7 @@
                   <div class="submit-wrap_form-wrap_line_text"><span>EMAIL ADDRESS</span></div>
                   <div class="submit-wrap_form-wrap_line_input">
                     <div class="input-wrap">
-                      <%= f.text_field :email, placeholder: 'Your Email Address'%>
+                      <%= f.text_field :email, placeholder: 'Your Email Address' , required: true%>
                     </div>
                   </div>
                 </div>
@@ -85,7 +85,7 @@
                   <div class="submit-wrap_form-wrap_line_text"><span>CITY </span></div>
                   <div class="submit-wrap_form-wrap_line_input">
                     <div class="input-wrap">
-                      <%= f.text_field :city, placeholder: "Your City"%>
+                      <%= f.text_field :city, placeholder: "Your City" , required: true%>
                     </div>
                   </div>
                 </div>
@@ -93,7 +93,7 @@
                   <div class="submit-wrap_form-wrap_line_text"><span>STATE </span></div>
                   <div class="submit-wrap_form-wrap_line_input">
                     <div class="input-wrap">
-                      <%= f.text_field :state, placeholder: "Country if not in USA"%>
+                      <%= f.text_field :state, placeholder: "Country if not in USA" , required: true%>
                     </div>
                   </div>
                 </div>

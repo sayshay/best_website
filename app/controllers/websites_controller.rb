@@ -1,8 +1,12 @@
 class WebsitesController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :listing, :index, :submissions]
   before_action :set_website, only: [:show, :edit, :update, :destroy]
 
   def listing
+  end
 
+  def submissions
+    @websites = current_user.websites.joins(:company)
   end
 
   def index
@@ -14,6 +18,7 @@ class WebsitesController < ApplicationController
 
   def new
     @website = Website.new
+    @user = current_user
   end
 
   def edit
@@ -59,6 +64,6 @@ class WebsitesController < ApplicationController
     end
 
     def website_params
-      params.require(:website).permit(:name, :twitter, :industry, :features, :description, :image)
+      params.require(:website).permit(:name, :twitter, :industry, :features, :description, :image, :user_id)
     end
 end

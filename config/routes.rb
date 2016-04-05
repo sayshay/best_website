@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/companies/new/:id', to: "companies#new", as: :new_company
 
   get '/listing', to: "websites#listing", as: :listing
+  get '/submissions', to: "websites#submissions", as: :submissions
 
   #resources :users
 

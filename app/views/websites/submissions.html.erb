@@ -1,4 +1,6 @@
 
+
+    <!-- svg иконки end-->
     <div class="page-wrapp">
       <div class="content-without-footer">
         <%= render "layouts/header"%>
@@ -68,54 +70,33 @@
           </div>
         </div>
         <!-- af header line end-->
-        <!-- details wrap start-->
-        <div class="details-wrap">
-          <div class="container">
-            <div class="details-wrap_title-line">
-              <div class="details-wrap_title-line_title"><span><%= @website.name %></span></div>
-              <div class="details-wrap_title-bottom-line">
-                <div class="details-wrap_title-bottom-line_text1"><span>#2 of Top Web Design Agencies</span></div>
-                <div class="details-wrap_title-bottom-line_text2"><span><%= @website.company.city %>, <%= @website.company.state %></span></div>
-                <div class="details-wrap_title-bottom-line_text3"><span>By:  <a href="#">Lynch </a></span></div>
-              </div><a href="#" class="details-wrap_title-line_button prev"><</a><a href="#" class="details-wrap_title-line_button next">></a>
-            </div>
-            <div class="details-wrap_text">
-              <p><%= @website.description %></p>
-            </div>
-            <div class="details-wrap_view-site-button"> <a href="#" class="btn">VIEW WEBSITE</a></div>
+        <!-- listing start-->
+        <div class="listing-wrap">
+          <div class="listing-wrap_title">
+            <div class="container"><span>Your Submissions</span></div>
           </div>
-        </div>
-        <div class="details-img-wrap">
-          <div class="container">
-            <div class="details-img-wrap_img-place"><%= image_tag @website.image %>
-              <div class="details-img-wrap_img-place_top-icon">
-                <svg class="svg-icon top-icon-path">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#top-icon-path"></use>
-                </svg>
-                <div class="round"><span>#2</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="details-similars-wrap">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
+
+          <div class="listing-wrap_grid grid">
+            <div class="listing-wrap_grid_sizer"></div>
+            <div class="listing-wrap_grid_gutter"></div>
+
+            <% @websites.each do |submission| %>
+              <div class="listing-wrap_grid_grid-item">
                 <div class="details-similars-wrap_item">
-                  <div class="details-similars-wrap_item_img"><a href="#"><%= image_tag "userfiles/blog/img.jpg" %></a></div>
+                  <div class="details-similars-wrap_item_img"><a href="#"><%= image_tag submission.image %></a></div>
                   <div class="details-similars-wrap_item_text clearfix">
                     <div class="details-similars-wrap_item_text_icon"><%= image_tag "template/similar-arph-icon.png" %></div>
                     <div class="details-similars-wrap_item_text_wrap">
-                      <div class="details-similars-wrap_item_text_name"><a href="#"> Dotlogics </a></div>
+                      <div class="details-similars-wrap_item_text_name"><a href="#"> <%= submission.name%> </a></div>
                       <div class="details-similars-wrap_item_text_text2">
-                        <div class="adress"><span>Farmingdale, USA</span></div>
-                        <div class="by"><span>By:  <a href="#">Carmichael Lynch</a></span></div>
+                        <div class="adress"><span><%= submission.company.address%></span></div>
+                        <div class="by"><span>By:  <a href="#"><%= submission.company.name%></a></span></div>
                       </div>
                     </div>
                   </div>
                   <div class="details-similars-wrap_item_footer">
                     <div class="details-similars-wrap_item_footer_buttons clearfix">
-                      <div class="details-similars-wrap_item_footer_buttons_blue"><a href="#">VIEW DETAILS</a></div>
+                      <div class="details-similars-wrap_item_footer_buttons_blue"><%= link_to "VIEW DETAILS", website_path(submission)%></a></div>
                       <div class="details-similars-wrap_item_footer_buttons_green"><a href="#">VIEW WEBSITE</a></div>
                     </div>
                     <div class="details-similars-wrap_item_footer_like"><a href="#">
@@ -129,85 +110,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <div class="details-similars-wrap_item">
-                  <div class="details-similars-wrap_item_img"><a href="#"><%= image_tag "userfiles/blog/img.jpg" %></a></div>
-                  <div class="details-similars-wrap_item_text clearfix">
-                    <div class="details-similars-wrap_item_text_icon"><%= image_tag "template/similar-arph-icon.png" %></div>
-                    <div class="details-similars-wrap_item_text_wrap">
-                      <div class="details-similars-wrap_item_text_name"><a href="#"> Dotlogics </a></div>
-                      <div class="details-similars-wrap_item_text_text2">
-                        <div class="adress"><span>Farmingdale, USA</span></div>
-                        <div class="by"><span>By:  <a href="#">Carmichael Lynch</a></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="details-similars-wrap_item_footer">
-                    <div class="details-similars-wrap_item_footer_buttons clearfix">
-                      <div class="details-similars-wrap_item_footer_buttons_blue"><a href="#">VIEW DETAILS</a></div>
-                      <div class="details-similars-wrap_item_footer_buttons_green"><a href="#">VIEW WEBSITE</a></div>
-                    </div>
-                    <div class="details-similars-wrap_item_footer_like"><a href="#">
-                        <svg class="svg-icon like-icon">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#like-icon"></use>
-                        </svg></a></div>
-                    <div class="details-similars-wrap_item_footer_share"><a href="#">
-                        <svg class="svg-icon share-icon">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share-icon"></use>
-                        </svg></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="details-similars-wrap_item">
-                  <div class="details-similars-wrap_item_img"><a href="#"><%= image_tag "userfiles/blog/img.jpg" %></a></div>
-                  <div class="details-similars-wrap_item_text clearfix">
-                    <div class="details-similars-wrap_item_text_icon"><%= image_tag "template/similar-arph-icon.png" %></div>
-                    <div class="details-similars-wrap_item_text_wrap">
-                      <div class="details-similars-wrap_item_text_name"><a href="#"> Dotlogics </a></div>
-                      <div class="details-similars-wrap_item_text_text2">
-                        <div class="adress"><span>Farmingdale, USA</span></div>
-                        <div class="by"><span>By:  <a href="#">Carmichael Lynch</a></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="details-similars-wrap_item_footer">
-                    <div class="details-similars-wrap_item_footer_buttons clearfix">
-                      <div class="details-similars-wrap_item_footer_buttons_blue"><a href="#">VIEW DETAILS</a></div>
-                      <div class="details-similars-wrap_item_footer_buttons_green"><a href="#">VIEW WEBSITE</a></div>
-                    </div>
-                    <div class="details-similars-wrap_item_footer_like"><a href="#">
-                        <svg class="svg-icon like-icon">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#like-icon"></use>
-                        </svg></a></div>
-                    <div class="details-similars-wrap_item_footer_share"><a href="#">
-                        <svg class="svg-icon share-icon">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share-icon"></use>
-                        </svg></a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <% end %>
+
           </div>
         </div>
-        <!-- details wrap end-->
-        <!--bef footer line start-->
-        <div class="bef-fot-line">
-          <div class="container clearfix">
-            <div class="bef-fot-line_left-text"><span>PREVIOUS 10 TOP CUSTOM WEB DESIGN COMPANIES</span></div>
-            <div class="bef-fot-line_select">
-              <select title="PREVIOUS YEARS" class="selectpicker">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-                <option>Option 4</option>
-                <option>Option 5</option>
-              </select>
-            </div>
-            <div class="bef-fot-line_right-block"><a href="#">SUBMIT YOUR WEBSITE </a></div>
-          </div>
-        </div>
-        <!--bef footer line end-->
+        <!-- listing end-->
+
 
       </div>
       <!-- footer start-->
@@ -227,7 +135,7 @@
         <div class="footer_second-line">
           <div class="container clearfix">
             <div class="footer_second-line_text-block">
-              <div class="footer_second-line_text-block_logo hidden-xs hidden-sm"><a href="#"><%= image_tag "template/header-logo.png" %></a></div>
+              <div class="footer_second-line_text-block_logo hidden-xs hidden-sm"><a href="#"><%= image_tag"template/header-logo.png" %></a></div>
               <div class="footer_second-line_text-block_text hidden-xs hidden-sm">
                 <p>10 Best Design is the internet’s #1 web design ranking, reviews, and awards organization. Our team has a extensive experience in the industry, and our Best Web Design Firms & Website Design Awards are now one of the fastest growing!</p>
               </div>
@@ -361,3 +269,4 @@
       </div>
       <!-- modals end-->
     </div>
+
